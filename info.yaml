@@ -6,7 +6,6 @@ project:
   picture: docs/empty.png
   author: "Matt Venn & Teo"
   license: LICENSE
-  waive_formal: 'tristate issues'
 
 # optional interfaces you want to use: gpio, la1, la2, la3, irq, clk2, wishbone & openram
 interfaces: ['la1', 'la2', 'la3']
