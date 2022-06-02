@@ -187,9 +187,9 @@ module wrapped_instrumented_adder(
 
     // outputs
     //.ring_osc_out           (la1_data_out),         // used for spice sims
-    .sum_out                (la1_data_out[7:0]),    // output of the adder
-    .done                   (la1_data_out[8]),      // when the integration counter gets to zero
-    .ring_osc_counter_out   (la2_data_out)          // number of ring cycles / 2 counted
+    .sum_out                (buf_la1_data_out[7:0]),    // output of the adder
+    .done                   (buf_la1_data_out[8]),      // when the integration counter gets to zero
+    .ring_osc_counter_out   (buf_la2_data_out)          // number of ring cycles / 2 counted
     );
 
 endmodule 

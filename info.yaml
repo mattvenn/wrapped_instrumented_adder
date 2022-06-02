@@ -19,8 +19,8 @@ caravel_test:
 
 # module test
 module_test:
-  recipe: "all" 
-  directory: "project directory"
+  recipe: "test_adder" 
+  directory: "instrumented_adder"
   makefile: "Makefile"
 
 # run the wrapper formal proof

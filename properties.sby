@@ -5,10 +5,13 @@ mode prove
 smtbmc
 
 [script]
-read -formal wrapper.v rest of your source files.v
-prep -top wrapped_project
+read -formal wrapper.v instrumented_adder.v sklansky.v kogge_stone.v ripple_carry.v
+prep -top wrapped_instrumented_adder
 
 [files]
 wrapper.v
 properties.v
-rest of your source files.v
+instrumented_adder/src/instrumented_adder.v
+instrumented_adder/src/sklansky.v
+instrumented_adder/src/kogge_stone.v
+instrumented_adder/src/ripple_carry.v
