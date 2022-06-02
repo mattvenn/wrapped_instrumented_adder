@@ -2,20 +2,32 @@
 set script_dir [file dirname [file normalize [info script]]]
 
 # name of your project, should also match the name of the top module
-set ::env(DESIGN_NAME) project_name
+set ::env(DESIGN_NAME) wrapped_instrumented_adder
+
+# save some time
+set ::env(RUN_KLAYOUT_XOR) 0
+set ::env(RUN_KLAYOUT_DRC) 0
 
 # add your source files here
 set ::env(VERILOG_FILES) "$::env(DESIGN_DIR)/wrapper.v \
-    $::env(DESIGN_DIR)/other source files.v"
+    $::env(DESIGN_DIR)/instrumented_adder/src/instrumented_adder.v \
+    $::env(DESIGN_DIR)/instrumented_adder/src/sklansky.v \
+    $::env(DESIGN_DIR)/instrumented_adder/src/ripple_carry.v \
+    $::env(DESIGN_DIR)/instrumented_adder/src/kogge_stone.v"
+
+# allow instantiation of sky130 cell names
+set ::env(SYNTH_READ_BLACKBOX_LIB) 1
 
 # target density, change this if you can't get your design to fit
 set ::env(PL_TARGET_DENSITY) 0.4
+#set ::env(FP_CORE_UTIL) 35
+#set ::env(PL_TARGET_DENSITY) [ expr ($::env(FP_CORE_UTIL)+5) / 100.0 ]
 
 # don't put clock buffers on the outputs, need tristates to be the final cells
 set ::env(PL_RESIZER_BUFFER_OUTPUT_PORTS) 0
 
 # set absolute size of the die to 300 x 300 um
-set ::env(DIE_AREA) "0 0 300 300"
+set ::env(DIE_AREA) "0 0 250 250"
 set ::env(FP_SIZING) absolute
 
 # define number of IO pads
