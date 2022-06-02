@@ -2,7 +2,7 @@
 set script_dir [file dirname [file normalize [info script]]]
 
 # name of your project, should also match the name of the top module
-set ::env(DESIGN_NAME) wrapped_instrumented_adder_behav
+set ::env(DESIGN_NAME) wrapped_instrumented_adder_brent
 
 # save some time
 set ::env(RUN_KLAYOUT_XOR) 0
@@ -13,6 +13,7 @@ set ::env(VERILOG_FILES) "$::env(DESIGN_DIR)/wrapper.v \
     $::env(DESIGN_DIR)/instrumented_adder/src/instrumented_adder.v \
     $::env(DESIGN_DIR)/instrumented_adder/src/sklansky.v \
     $::env(DESIGN_DIR)/instrumented_adder/src/ripple_carry.v \
+    $::env(DESIGN_DIR)/instrumented_adder/src/brent_kung.v \
     $::env(DESIGN_DIR)/instrumented_adder/src/kogge_stone.v"
 
 # allow instantiation of sky130 cell names

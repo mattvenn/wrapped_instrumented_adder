@@ -5,11 +5,12 @@ mode prove
 smtbmc
 
 [script]
-read -formal wrapper.v instrumented_adder.v 
-prep -top wrapped_instrumented_adder_behav
+read -formal wrapper.v instrumented_adder.v  brent_kung.v
+prep -top wrapped_instrumented_adder_brent
 flatten; tribuf -formal
 
 [files]
 wrapper.v
 properties.v
 instrumented_adder/src/instrumented_adder.v
+instrumented_adder/src/brent_kung.v
