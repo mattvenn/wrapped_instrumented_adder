@@ -36,9 +36,6 @@ openlane:
 source:
     - wrapper.v
     - instrumented_adder/src/instrumented_adder.v
-    - instrumented_adder/src/sklansky.v
-    - instrumented_adder/src/kogge_stone.v
-    - instrumented_adder/src/ripple_carry.v
 
 # gds - check nothing on metal 5, DRC & LVS
 final:
