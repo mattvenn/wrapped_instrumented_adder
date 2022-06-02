@@ -1,6 +1,6 @@
 # Instrumented adder
 
-Main [README is here](instrumented_adder/README.md)
+Main [README is here](https://github.com/mattvenn/instrumented_adder).
 
 # Zero to ASIC Course
 
