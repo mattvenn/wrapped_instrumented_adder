@@ -1,7 +1,7 @@
 --- 
 # information
 project: 
-  title: "instrumented adder"
+  title: "instrumented adder - behavioural"
   description: "adds a precise timer to optimised hardware adders to measure how fast they are"
   picture: docs/empty.png
   author: "Matt Venn & Teo"
@@ -15,7 +15,7 @@ caravel_test:
   recipe: "coco_test"
   directory: "instrumented_adder_test"
   id: 2
-  module_name: "wrapped_instrumented_adder"
+  module_name: "wrapped_instrumented_adder_behav"
 
 # module test
 module_test:
@@ -43,6 +43,6 @@ source:
 # gds - check nothing on metal 5, DRC & LVS
 final:
   directory: "final"
-  gds_filename: "gds/wrapped_instrumented_adder.gds"
-  lvs_filename: "verilog/gl/wrapped_instrumented_adder.v"
-  lef_filename: "lef/wrapped_instrumented_adder.lef"
+  gds_filename: "gds/wrapped_instrumented_adder_behav.gds"
+  lvs_filename: "verilog/gl/wrapped_instrumented_adder_behav.v"
+  lef_filename: "lef/wrapped_instrumented_adder_behav.lef"

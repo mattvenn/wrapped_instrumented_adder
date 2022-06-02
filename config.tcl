@@ -2,7 +2,7 @@
 set script_dir [file dirname [file normalize [info script]]]
 
 # name of your project, should also match the name of the top module
-set ::env(DESIGN_NAME) wrapped_instrumented_adder
+set ::env(DESIGN_NAME) wrapped_instrumented_adder_behav
 
 # save some time
 set ::env(RUN_KLAYOUT_XOR) 0

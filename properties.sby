@@ -6,7 +6,7 @@ smtbmc
 
 [script]
 read -formal wrapper.v instrumented_adder.v 
-prep -top wrapped_instrumented_adder
+prep -top wrapped_instrumented_adder_behav
 flatten; tribuf -formal
 
 [files]
