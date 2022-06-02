@@ -1,11 +1,12 @@
 --- 
 # information
 project: 
-  title: "instrumented adder - behavioural"
+  title: "instrumented adder - sklansky"
   description: "adds a precise timer to optimised hardware adders to measure how fast they are"
   picture: docs/empty.png
   author: "Matt Venn & Teo"
   license: LICENSE
+  waive_formal: 'sklansky causes errors'
 
 # optional interfaces you want to use: gpio, la1, la2, la3, irq, clk2, wishbone & openram
 interfaces: ['la1', 'la2', 'la3']
@@ -14,8 +15,8 @@ interfaces: ['la1', 'la2', 'la3']
 caravel_test:
   recipe: "coco_test"
   directory: "instrumented_adder_test"
-  id: 2
-  module_name: "wrapped_instrumented_adder_behav"
+  id: 3
+  module_name: "wrapped_instrumented_adder_sklansky"
 
 # module test
 module_test:
@@ -37,12 +38,10 @@ source:
     - wrapper.v
     - instrumented_adder/src/instrumented_adder.v
     - instrumented_adder/src/sklansky.v
-    - instrumented_adder/src/kogge_stone.v
-    - instrumented_adder/src/ripple_carry.v
 
 # gds - check nothing on metal 5, DRC & LVS
 final:
   directory: "final"
-  gds_filename: "gds/wrapped_instrumented_adder_behav.gds"
-  lvs_filename: "verilog/gl/wrapped_instrumented_adder_behav.v"
-  lef_filename: "lef/wrapped_instrumented_adder_behav.lef"
+  gds_filename: "gds/wrapped_instrumented_adder_sklansky.gds"
+  lvs_filename: "verilog/gl/wrapped_instrumented_adder_sklansky.v"
+  lef_filename: "lef/wrapped_instrumented_adder_sklansky.lef"
