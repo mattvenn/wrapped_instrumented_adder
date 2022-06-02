@@ -2,9 +2,9 @@ VERSION 5.7 ;
   NOWIREEXTENSIONATPIN ON ;
   DIVIDERCHAR "/" ;
   BUSBITCHARS "[]" ;
-MACRO wrapped_instrumented_adder
+MACRO wrapped_instrumented_adder_behav
   CLASS BLOCK ;
-  FOREIGN wrapped_instrumented_adder ;
+  FOREIGN wrapped_instrumented_adder_behav ;
   ORIGIN 0.000 0.000 ;
   SIZE 250.000 BY 250.000 ;
   PIN active
@@ -2645,6 +2645,6 @@ MACRO wrapped_instrumented_adder
       LAYER met4 ;
         RECT 230.295 77.695 230.625 235.105 ;
   END
-END wrapped_instrumented_adder
+END wrapped_instrumented_adder_behav
 END LIBRARY
 

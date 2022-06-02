@@ -1,7 +1,7 @@
 (DELAYFILE
  (SDFVERSION "3.0")
- (DESIGN "wrapped_instrumented_adder")
- (DATE "Thu Jun  2 11:10:22 2022")
+ (DESIGN "wrapped_instrumented_adder_behav")
+ (DATE "Thu Jun  2 12:28:21 2022")
  (VENDOR "Parallax")
  (PROGRAM "STA")
  (VERSION "2.3.1")
@@ -11,7 +11,7 @@
  (TEMPERATURE 25.000::25.000)
  (TIMESCALE 1ns)
  (CELL
-  (CELLTYPE "wrapped_instrumented_adder")
+  (CELLTYPE "wrapped_instrumented_adder_behav")
   (INSTANCE)
   (DELAY
    (ABSOLUTE

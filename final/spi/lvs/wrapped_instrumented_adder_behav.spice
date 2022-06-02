@@ -1,4 +1,4 @@
-* NGSPICE file created from wrapped_instrumented_adder.ext - technology: sky130A
+* NGSPICE file created from wrapped_instrumented_adder_behav.ext - technology: sky130A
 
 * Black-box entry subcircuit for sky130_fd_sc_hd__tapvpwrvgnd_1 abstract view
 .subckt sky130_fd_sc_hd__tapvpwrvgnd_1 VGND VPWR
@@ -332,7 +332,7 @@
 .subckt sky130_fd_sc_hd__dfrtp_4 CLK D RESET_B VGND VNB VPB VPWR Q
 .ends
 
-.subckt wrapped_instrumented_adder active la1_data_in[0] la1_data_in[10] la1_data_in[11]
+.subckt wrapped_instrumented_adder_behav active la1_data_in[0] la1_data_in[10] la1_data_in[11]
 + la1_data_in[12] la1_data_in[13] la1_data_in[14] la1_data_in[15] la1_data_in[16]
 + la1_data_in[17] la1_data_in[18] la1_data_in[19] la1_data_in[1] la1_data_in[20] la1_data_in[21]
 + la1_data_in[22] la1_data_in[23] la1_data_in[24] la1_data_in[25] la1_data_in[26]

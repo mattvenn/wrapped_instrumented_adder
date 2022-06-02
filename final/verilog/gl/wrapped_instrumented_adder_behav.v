@@ -1,4 +1,4 @@
-module wrapped_instrumented_adder (active,
+module wrapped_instrumented_adder_behav (active,
     vccd1,
     vssd1,
     wb_clk_i,

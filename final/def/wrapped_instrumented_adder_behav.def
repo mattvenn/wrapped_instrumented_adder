@@ -1,7 +1,7 @@
 VERSION 5.8 ;
 DIVIDERCHAR "/" ;
 BUSBITCHARS "[]" ;
-DESIGN wrapped_instrumented_adder ;
+DESIGN wrapped_instrumented_adder_behav ;
 UNITS DISTANCE MICRONS 1000 ;
 DIEAREA ( 0 0 ) ( 250000 250000 ) ;
 ROW ROW_0 unithd 5520 10880 N DO 519 BY 1 STEP 460 0 ;

@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1654168228
+timestamp 1654172906
 << obsli1 >>
 rect 1104 2159 48852 47345
 << obsm1 >>
@@ -1185,8 +1185,8 @@ port 292 nsew signal input
 string FIXED_BBOX 0 0 50000 50000
 string LEFclass BLOCK
 string LEFview TRUE
-string GDS_END 2778494
-string GDS_FILE /openlane/designs/wrapped_instrumented_adder/runs/RUN_2022.06.02_11.09.13/results/finishing/wrapped_instrumented_adder.magic.gds
-string GDS_START 551766
+string GDS_END 2778506
+string GDS_FILE /openlane/designs/wrapped_instrumented_adder_behav/runs/RUN_2022.06.02_12.27.14/results/finishing/wrapped_instrumented_adder_behav.magic.gds
+string GDS_START 551778
 << end >>
 
