@@ -38,6 +38,7 @@ module instrumented_adder_tb;
     // change to suit your project. Here's how we can make some nicer named signals for inputs & outputs
     wire ready = mprj_io[8];
     wire done = mprj_io[9];
+    wire [7:0] ring_osc = mprj_io[17:10];
     /////
     
 

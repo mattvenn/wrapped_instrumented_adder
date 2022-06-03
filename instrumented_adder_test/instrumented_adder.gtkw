@@ -1,27 +1,23 @@
 [*]
 [*] GTKWave Analyzer v3.3.111 (w)1999-2020 BSI
-[*] Thu Jun  2 09:50:12 2022
+[*] Fri Jun  3 11:43:13 2022
 [*]
 [dumpfile] "/home/matt/work/asic-workshop/shuttle6/zero_to_asic_mpw6/verilog/dv/instrumented_adder_test/instrumented_adder.vcd"
-[dumpfile_mtime] "Thu Jun  2 09:50:07 2022"
-[dumpfile_size] 330
-[savefile] "/home/matt/work/asic-workshop/shuttle6/zero_to_asic_mpw6/verilog/dv/instrumented_adder.gtkw"
-[timestart] 0
-[size] 2209 1451
-[pos] -1 -1
-*-27.900000 737000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[dumpfile_mtime] "Fri Jun  3 11:39:56 2022"
+[dumpfile_size] 678432
+[savefile] "/home/matt/work/asic-workshop/shuttle6/zero_to_asic_mpw6/verilog/dv/instrumented_adder_test/instrumented_adder.gtkw"
+[timestart] 797345000
+[size] 2488 1519
+[pos] 25 22
+*-20.699999 801200000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] instrumented_adder_tb.
 [treeopen] instrumented_adder_tb.uut.
 [treeopen] instrumented_adder_tb.uut.mprj.
-[treeopen] instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_2.
-[treeopen] instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_2.instrumented_adder.
-[treeopen] instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_2.instrumented_adder.bypass1._0_.
-[treeopen] instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_2.instrumented_adder.tristate_sum_outputs[0].
-[treeopen] instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_2.instrumented_adder.tristate_sum_outputs[0]._0_.
+[treeopen] instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.
 [sst_width] 612
 [signals_width] 707
 [sst_expanded] 1
-[sst_vpaned_height] 621
+[sst_vpaned_height] 576
 @28
 instrumented_adder_tb.flash_clk
 instrumented_adder_tb.flash_csb
@@ -29,141 +25,23 @@ instrumented_adder_tb.flash_io0
 instrumented_adder_tb.flash_io1
 instrumented_adder_tb.RSTB
 instrumented_adder_tb.clk
-instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_2.active
-instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_2.instrumented_adder.reset
-instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_2.instrumented_adder.stop_b
-instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_2.instrumented_adder.bypass_b
-instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_2.instrumented_adder.control_b
-instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_2.instrumented_adder.extra_inverter
-instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_2.instrumented_adder.counter_load
-instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_2.instrumented_adder.counter_enable
-instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_2.instrumented_adder.done
-@22
-instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_2.instrumented_adder.a_input[7:0]
-instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_2.instrumented_adder.b_input[7:0]
-instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_2.instrumented_adder.integration_time[31:0]
-instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_2.instrumented_adder.ring_osc_counter_out[31:0]
-@28
-instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_2.instrumented_adder.bypass1.TE_B
-@c00022
-instrumented_adder_tb.mprj_io[37:0]
-@28
-(0)instrumented_adder_tb.mprj_io[37:0]
-(1)instrumented_adder_tb.mprj_io[37:0]
-(2)instrumented_adder_tb.mprj_io[37:0]
-(3)instrumented_adder_tb.mprj_io[37:0]
-(4)instrumented_adder_tb.mprj_io[37:0]
-(5)instrumented_adder_tb.mprj_io[37:0]
-(6)instrumented_adder_tb.mprj_io[37:0]
-(7)instrumented_adder_tb.mprj_io[37:0]
-(8)instrumented_adder_tb.mprj_io[37:0]
-(9)instrumented_adder_tb.mprj_io[37:0]
-(10)instrumented_adder_tb.mprj_io[37:0]
-(11)instrumented_adder_tb.mprj_io[37:0]
-(12)instrumented_adder_tb.mprj_io[37:0]
-(13)instrumented_adder_tb.mprj_io[37:0]
-(14)instrumented_adder_tb.mprj_io[37:0]
-(15)instrumented_adder_tb.mprj_io[37:0]
-(16)instrumented_adder_tb.mprj_io[37:0]
-(17)instrumented_adder_tb.mprj_io[37:0]
-(18)instrumented_adder_tb.mprj_io[37:0]
-(19)instrumented_adder_tb.mprj_io[37:0]
-(20)instrumented_adder_tb.mprj_io[37:0]
-(21)instrumented_adder_tb.mprj_io[37:0]
-(22)instrumented_adder_tb.mprj_io[37:0]
-(23)instrumented_adder_tb.mprj_io[37:0]
-(24)instrumented_adder_tb.mprj_io[37:0]
-(25)instrumented_adder_tb.mprj_io[37:0]
-(26)instrumented_adder_tb.mprj_io[37:0]
-(27)instrumented_adder_tb.mprj_io[37:0]
-(28)instrumented_adder_tb.mprj_io[37:0]
-(29)instrumented_adder_tb.mprj_io[37:0]
-(30)instrumented_adder_tb.mprj_io[37:0]
-(31)instrumented_adder_tb.mprj_io[37:0]
-(32)instrumented_adder_tb.mprj_io[37:0]
-(33)instrumented_adder_tb.mprj_io[37:0]
-(34)instrumented_adder_tb.mprj_io[37:0]
-(35)instrumented_adder_tb.mprj_io[37:0]
-(36)instrumented_adder_tb.mprj_io[37:0]
-(37)instrumented_adder_tb.mprj_io[37:0]
-@1401200
--group_end
+instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.instrumented_adder.reset
+instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.instrumented_adder.extra_inverter
+instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.instrumented_adder.done
+instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.instrumented_adder.counter_load
+instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.instrumented_adder.stop_b
+instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.instrumented_adder.counter_enable
+@8024
+instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.instrumented_adder.ring_osc_counter[31:0]
+instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.instrumented_adder.integration_counter[31:0]
+@29
+instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.instrumented_adder.ring_top
+@200
+-
 @28
 instrumented_adder_tb.ready
 instrumented_adder_tb.done
-@c00022
-instrumented_adder_tb.uut.mprj.la1_data_in[31:0]
-@28
-(0)instrumented_adder_tb.uut.mprj.la1_data_in[31:0]
-(1)instrumented_adder_tb.uut.mprj.la1_data_in[31:0]
-(2)instrumented_adder_tb.uut.mprj.la1_data_in[31:0]
-(3)instrumented_adder_tb.uut.mprj.la1_data_in[31:0]
-(4)instrumented_adder_tb.uut.mprj.la1_data_in[31:0]
-(5)instrumented_adder_tb.uut.mprj.la1_data_in[31:0]
-(6)instrumented_adder_tb.uut.mprj.la1_data_in[31:0]
-(7)instrumented_adder_tb.uut.mprj.la1_data_in[31:0]
-(8)instrumented_adder_tb.uut.mprj.la1_data_in[31:0]
-(9)instrumented_adder_tb.uut.mprj.la1_data_in[31:0]
-(10)instrumented_adder_tb.uut.mprj.la1_data_in[31:0]
-(11)instrumented_adder_tb.uut.mprj.la1_data_in[31:0]
-(12)instrumented_adder_tb.uut.mprj.la1_data_in[31:0]
-(13)instrumented_adder_tb.uut.mprj.la1_data_in[31:0]
-(14)instrumented_adder_tb.uut.mprj.la1_data_in[31:0]
-(15)instrumented_adder_tb.uut.mprj.la1_data_in[31:0]
-(16)instrumented_adder_tb.uut.mprj.la1_data_in[31:0]
-(17)instrumented_adder_tb.uut.mprj.la1_data_in[31:0]
-(18)instrumented_adder_tb.uut.mprj.la1_data_in[31:0]
-(19)instrumented_adder_tb.uut.mprj.la1_data_in[31:0]
-(20)instrumented_adder_tb.uut.mprj.la1_data_in[31:0]
-(21)instrumented_adder_tb.uut.mprj.la1_data_in[31:0]
-(22)instrumented_adder_tb.uut.mprj.la1_data_in[31:0]
-(23)instrumented_adder_tb.uut.mprj.la1_data_in[31:0]
-(24)instrumented_adder_tb.uut.mprj.la1_data_in[31:0]
-(25)instrumented_adder_tb.uut.mprj.la1_data_in[31:0]
-(26)instrumented_adder_tb.uut.mprj.la1_data_in[31:0]
-(27)instrumented_adder_tb.uut.mprj.la1_data_in[31:0]
-(28)instrumented_adder_tb.uut.mprj.la1_data_in[31:0]
-(29)instrumented_adder_tb.uut.mprj.la1_data_in[31:0]
-(30)instrumented_adder_tb.uut.mprj.la1_data_in[31:0]
-(31)instrumented_adder_tb.uut.mprj.la1_data_in[31:0]
-@1401200
--group_end
-@c00022
-instrumented_adder_tb.uut.mprj.la1_data_out[31:0]
-@28
-(0)instrumented_adder_tb.uut.mprj.la1_data_out[31:0]
-(1)instrumented_adder_tb.uut.mprj.la1_data_out[31:0]
-(2)instrumented_adder_tb.uut.mprj.la1_data_out[31:0]
-(3)instrumented_adder_tb.uut.mprj.la1_data_out[31:0]
-(4)instrumented_adder_tb.uut.mprj.la1_data_out[31:0]
-(5)instrumented_adder_tb.uut.mprj.la1_data_out[31:0]
-(6)instrumented_adder_tb.uut.mprj.la1_data_out[31:0]
-(7)instrumented_adder_tb.uut.mprj.la1_data_out[31:0]
-(8)instrumented_adder_tb.uut.mprj.la1_data_out[31:0]
-(9)instrumented_adder_tb.uut.mprj.la1_data_out[31:0]
-(10)instrumented_adder_tb.uut.mprj.la1_data_out[31:0]
-(11)instrumented_adder_tb.uut.mprj.la1_data_out[31:0]
-(12)instrumented_adder_tb.uut.mprj.la1_data_out[31:0]
-(13)instrumented_adder_tb.uut.mprj.la1_data_out[31:0]
-(14)instrumented_adder_tb.uut.mprj.la1_data_out[31:0]
-(15)instrumented_adder_tb.uut.mprj.la1_data_out[31:0]
-(16)instrumented_adder_tb.uut.mprj.la1_data_out[31:0]
-(17)instrumented_adder_tb.uut.mprj.la1_data_out[31:0]
-(18)instrumented_adder_tb.uut.mprj.la1_data_out[31:0]
-(19)instrumented_adder_tb.uut.mprj.la1_data_out[31:0]
-(20)instrumented_adder_tb.uut.mprj.la1_data_out[31:0]
-(21)instrumented_adder_tb.uut.mprj.la1_data_out[31:0]
-(22)instrumented_adder_tb.uut.mprj.la1_data_out[31:0]
-(23)instrumented_adder_tb.uut.mprj.la1_data_out[31:0]
-(24)instrumented_adder_tb.uut.mprj.la1_data_out[31:0]
-(25)instrumented_adder_tb.uut.mprj.la1_data_out[31:0]
-(26)instrumented_adder_tb.uut.mprj.la1_data_out[31:0]
-(27)instrumented_adder_tb.uut.mprj.la1_data_out[31:0]
-(28)instrumented_adder_tb.uut.mprj.la1_data_out[31:0]
-(29)instrumented_adder_tb.uut.mprj.la1_data_out[31:0]
-(30)instrumented_adder_tb.uut.mprj.la1_data_out[31:0]
-(31)instrumented_adder_tb.uut.mprj.la1_data_out[31:0]
-@1401200
--group_end
+@24
+instrumented_adder_tb.ring_osc[7:0]
 [pattern_trace] 1
 [pattern_trace] 0
