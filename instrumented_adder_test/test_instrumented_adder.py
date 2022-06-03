@@ -26,9 +26,11 @@ async def test_start(dut):
     dut.RSTB <= 1
 
     # wait with a timeout for the project to become active
-    await with_timeout(RisingEdge(dut.ready), 350, 'us')
+    await with_timeout(RisingEdge(dut.ready), 650, 'us')
 
     # wait
-    await with_timeout(RisingEdge(dut.done), 1000, 'us')
+    await with_timeout(RisingEdge(dut.done), 800, 'us')
     assert dut.done == 1
+    assert dut.ring_osc == 20
+
 
