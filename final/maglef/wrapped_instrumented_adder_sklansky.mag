@@ -1,11 +1,11 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1654174885
+timestamp 1654258840
 << obsli1 >>
 rect 1104 2159 48852 47345
 << obsm1 >>
-rect 14 1844 49022 47376
+rect 14 1912 49022 47456
 << metal2 >>
 rect -10 49200 102 50000
 rect 634 49200 746 50000
@@ -592,6 +592,9 @@ rect 800 35 49120 268
 rect 4208 2128 4528 47376
 rect 19568 2128 19888 47376
 rect 34928 2128 35248 47376
+<< obsm4 >>
+rect 19379 14315 19488 24173
+rect 19968 14315 20181 24173
 << labels >>
 rlabel metal3 s 49200 38708 50000 38948 6 active
 port 1 nsew signal input
@@ -1183,8 +1186,8 @@ port 292 nsew signal input
 string FIXED_BBOX 0 0 50000 50000
 string LEFclass BLOCK
 string LEFview TRUE
-string GDS_END 2728438
-string GDS_FILE /openlane/designs/wrapped_instrumented_adder_sklansky/runs/RUN_2022.06.02_13.00.06/results/finishing/wrapped_instrumented_adder_sklansky.magic.gds
-string GDS_START 522694
+string GDS_END 2789098
+string GDS_FILE /openlane/designs/wrapped_instrumented_adder_sklansky/runs/RUN_2022.06.03_12.19.28/results/finishing/wrapped_instrumented_adder_sklansky.magic.gds
+string GDS_START 494846
 << end >>
 
