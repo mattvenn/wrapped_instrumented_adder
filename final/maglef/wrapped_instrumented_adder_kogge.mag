@@ -1,11 +1,11 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1654176701
+timestamp 1654258645
 << obsli1 >>
 rect 1104 2159 48852 47345
 << obsm1 >>
-rect 14 2128 49022 47376
+rect 14 1844 49022 47456
 << metal2 >>
 rect -10 49200 102 50000
 rect 634 49200 746 50000
@@ -592,8 +592,6 @@ rect 800 35 49120 268
 rect 4208 2128 4528 47376
 rect 19568 2128 19888 47376
 rect 34928 2128 35248 47376
-<< obsm4 >>
-rect 46059 19755 46125 47021
 << labels >>
 rlabel metal3 s 49200 38708 50000 38948 6 active
 port 1 nsew signal input
@@ -1185,8 +1183,8 @@ port 292 nsew signal input
 string FIXED_BBOX 0 0 50000 50000
 string LEFclass BLOCK
 string LEFview TRUE
-string GDS_END 2706188
-string GDS_FILE /openlane/designs/wrapped_instrumented_adder_kogge/runs/RUN_2022.06.02_13.30.29/results/finishing/wrapped_instrumented_adder_kogge.magic.gds
-string GDS_START 496014
+string GDS_END 2787130
+string GDS_FILE /openlane/designs/wrapped_instrumented_adder_kogge/runs/RUN_2022.06.03_12.16.13/results/finishing/wrapped_instrumented_adder_kogge.magic.gds
+string GDS_START 489852
 << end >>
 
