@@ -24,7 +24,7 @@
 // input control pins
 #define RESET           0
 #define STOP_B          1
-#define EXTRA_INV_B     2
+#define EXTRA_INV       2
 #define BYPASS_B        3
 #define CONTROL_B       4
 #define COUNTER_EN      5
@@ -56,6 +56,15 @@ void main()
     reg_mprj_io_8 = GPIO_MODE_MGMT_STD_OUTPUT; // ready
     reg_mprj_io_9 = GPIO_MODE_MGMT_STD_OUTPUT; // done
 
+    reg_mprj_io_10 = GPIO_MODE_MGMT_STD_OUTPUT; // ring osc counter out
+    reg_mprj_io_11 = GPIO_MODE_MGMT_STD_OUTPUT; // ring osc counter out
+    reg_mprj_io_12 = GPIO_MODE_MGMT_STD_OUTPUT; // ring osc counter out
+    reg_mprj_io_13 = GPIO_MODE_MGMT_STD_OUTPUT; // ring osc counter out
+    reg_mprj_io_14 = GPIO_MODE_MGMT_STD_OUTPUT; // ring osc counter out
+    reg_mprj_io_15 = GPIO_MODE_MGMT_STD_OUTPUT; // ring osc counter out
+    reg_mprj_io_16 = GPIO_MODE_MGMT_STD_OUTPUT; // ring osc counter out
+    reg_mprj_io_17 = GPIO_MODE_MGMT_STD_OUTPUT; // ring osc counter out
+
     reg_mprj_xfer = 1;
     while (reg_mprj_xfer == 1);
 
@@ -68,10 +77,10 @@ void main()
 	reg_mprj_datal |= 1 << 8;
 
     reg_la1_oenb = 0xFFFFFFFF; // enable
-    reg_la1_iena = 0;
+    reg_la1_iena = 0;          // enable
 
     reg_la2_oenb = 0xFFFFFFFF; // enable
-    reg_la2_iena = 0;
+    reg_la2_iena = 0;          // enable
 
     reg_la3_oenb = 0xFFFFFFFF; // enable
     reg_la3_iena = 0;
@@ -85,7 +94,7 @@ void main()
     // stop the ring
     CLR(reg_la1_data, STOP_B);
     // enable extra inverter
-    SET(reg_la1_data, EXTRA_INV_B);
+    SET(reg_la1_data, EXTRA_INV);
     // set a & b input to be 0
     reg_la3_data = 0;
 
@@ -109,20 +118,20 @@ void main()
     CLR(reg_la1_data, RESET);
     CLR(reg_la1_data, COUNTER_LOAD);
 
-    // start the loop
-    SET(reg_la1_data, STOP_B);
-    SET(reg_la1_data, COUNTER_EN);
+    // start the loop & enable in the same cycle
+    reg_la1_data |= ((1 << STOP_B) | (1 << COUNTER_EN));
 
     // wait for done to go high
     while(1) 
     {
-        // doesn't work. the bit goes high in LA, but this if statement is never true
-        if(reg_la1_data_in & (1 << 8))
+        if(GET(reg_la1_data_in, DONE))
             break;
-        break;
     }
 
-    // put a value on the mprj pins
+    // set the ring osc value onto the pins
+    reg_mprj_datal = reg_la2_data_in << 10;
+
+    // set done on the mprj pins
 	reg_mprj_datal |= 1 << 9;
 }
 
