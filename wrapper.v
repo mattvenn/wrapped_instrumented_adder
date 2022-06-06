@@ -162,7 +162,7 @@ module wrapped_instrumented_adder_ripple(
     // connecting what you need of the above signals. 
     // Use the buffered outputs for your module's outputs.
 
-    instrumented_adder instrumented_adder(
+    instrumented_adder_ripple instrumented_adder(
 
     .clk                    (wb_clk_i),              // clocks the time counter
     .reset                  (la1_data_in[0]),        // resets the counters

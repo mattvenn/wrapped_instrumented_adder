@@ -6,7 +6,6 @@ project:
   picture: docs/empty.png
   author: "Matt Venn & Teo"
   license: LICENSE
-  waive_caravel: 'repeated modules cause errors'
 
 # optional interfaces you want to use: gpio, la1, la2, la3, irq, clk2, wishbone & openram
 interfaces: ['la1', 'la2', 'la3']
@@ -36,8 +35,8 @@ openlane:
 # source required for various configs and module instantiation
 source:
     - wrapper.v
-#    - instrumented_adder/src/instrumented_adder.v
-#   - instrumented_adder/src/ripple_carry.v
+    - instrumented_adder/src/instrumented_adder.v
+    - instrumented_adder/src/ripple_carry.v
 
 # gds - check nothing on metal 5, DRC & LVS
 final:
