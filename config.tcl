@@ -10,10 +10,7 @@ set ::env(RUN_KLAYOUT_DRC) 0
 
 # add your source files here
 set ::env(VERILOG_FILES) "$::env(DESIGN_DIR)/wrapper.v \
-    $::env(DESIGN_DIR)/instrumented_adder/src/instrumented_adder.v \
-    $::env(DESIGN_DIR)/instrumented_adder/src/sklansky.v \
-    $::env(DESIGN_DIR)/instrumented_adder/src/ripple_carry.v \
-    $::env(DESIGN_DIR)/instrumented_adder/src/kogge_stone.v"
+    $::env(DESIGN_DIR)/instrumented_adder/src/instrumented_adder.v"
 
 # allow instantiation of sky130 cell names
 set ::env(SYNTH_READ_BLACKBOX_LIB) 1
