@@ -1,7 +1,7 @@
 --- 
 # information
 project: 
-  title: "instrumented adder - kogge"
+  title: "instrumented adder - Kogge Stone"
   description: "adds a precise timer to optimised hardware adders to measure how fast they are"
   picture: docs/empty.png
   author: "Matt Venn & Teo"
