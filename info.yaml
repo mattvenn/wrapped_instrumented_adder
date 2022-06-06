@@ -13,7 +13,7 @@ interfaces: ['la1', 'la2', 'la3']
 # test within caravel
 caravel_test:
   recipe: "coco_test"
-  directory: "instrumented_adder_test"
+  directory: "instrumented_adder_test_kogge"
   id: 6
   module_name: "wrapped_instrumented_adder_kogge"
 
