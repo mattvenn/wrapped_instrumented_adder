@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1654258645
+timestamp 1654519596
 << obsli1 >>
 rect 1104 2159 48852 47345
 << obsm1 >>
@@ -1184,7 +1184,7 @@ string FIXED_BBOX 0 0 50000 50000
 string LEFclass BLOCK
 string LEFview TRUE
 string GDS_END 2787130
-string GDS_FILE /openlane/designs/wrapped_instrumented_adder_kogge/runs/RUN_2022.06.03_12.16.13/results/finishing/wrapped_instrumented_adder_kogge.magic.gds
+string GDS_FILE /openlane/designs/wrapped_instrumented_adder_kogge/runs/RUN_2022.06.06_12.45.25/results/finishing/wrapped_instrumented_adder_kogge.magic.gds
 string GDS_START 489852
 << end >>
 
