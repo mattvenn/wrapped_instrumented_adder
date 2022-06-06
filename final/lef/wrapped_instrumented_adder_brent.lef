@@ -2351,7 +2351,7 @@ MACRO wrapped_instrumented_adder_brent
       LAYER li1 ;
         RECT 5.520 10.795 244.260 236.725 ;
       LAYER met1 ;
-        RECT 0.070 6.840 245.110 237.960 ;
+        RECT 0.070 7.520 245.110 237.280 ;
       LAYER met2 ;
         RECT 0.790 245.720 2.890 246.570 ;
         RECT 4.010 245.720 6.110 246.570 ;
@@ -2643,7 +2643,7 @@ MACRO wrapped_instrumented_adder_brent
         RECT 4.000 1.340 246.000 2.740 ;
         RECT 4.000 0.175 245.600 1.340 ;
       LAYER met4 ;
-        RECT 96.895 168.815 97.225 190.905 ;
+        RECT 100.575 17.855 137.705 235.105 ;
   END
 END wrapped_instrumented_adder_brent
 END LIBRARY
