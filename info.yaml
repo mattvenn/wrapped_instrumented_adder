@@ -1,7 +1,7 @@
 --- 
 # information
 project: 
-  title: "instrumented adder - brent"
+  title: "instrumented adder - Brent Kung"
   description: "adds a precise timer to optimised hardware adders to measure how fast they are"
   picture: docs/empty.png
   author: "Matt Venn & Teo"
