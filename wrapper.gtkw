@@ -1,0 +1,96 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Mon Jun  6 20:50:04 2022
+[*]
+[dumpfile] "/home/matt/work/asic-workshop/shuttle5/openlane/designs/wrapped_instrumented_adder/instrumented_adder.vcd"
+[dumpfile_mtime] "Mon Jun  6 20:49:38 2022"
+[dumpfile_size] 8627904
+[savefile] "/home/matt/work/asic-workshop/shuttle5/openlane/designs/wrapped_instrumented_adder/wrapper.gtkw"
+[timestart] 113520
+[size] 1000 912
+[pos] -1 -1
+*-13.000000 120150 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] wrapped_instrumented_adder_behav.
+[sst_width] 316
+[signals_width] 337
+[sst_expanded] 1
+[sst_vpaned_height] 253
+@28
+wrapped_instrumented_adder_behav.active
+wrapped_instrumented_adder_behav.instrumented_adder.reset
+wrapped_instrumented_adder_behav.wb_clk_i
+@800200
+-controls
+@28
+wrapped_instrumented_adder_behav.instrumented_adder.stop_b
+wrapped_instrumented_adder_behav.instrumented_adder.extra_inverter
+wrapped_instrumented_adder_behav.instrumented_adder.control_b
+wrapped_instrumented_adder_behav.instrumented_adder.bypass_b
+@22
+wrapped_instrumented_adder_behav.instrumented_adder.integration_counter[31:0]
+@28
+wrapped_instrumented_adder_behav.instrumented_adder.done
+@24
+wrapped_instrumented_adder_behav.instrumented_adder.ring_osc_counter_out[31:0]
+@1000200
+-controls
+@800200
+-mux
+@28
+wrapped_instrumented_adder_behav.write
+@22
+wrapped_instrumented_adder_behav.reg_sel[3:0]
+wrapped_instrumented_adder_behav.a_input[31:0]
+wrapped_instrumented_adder_behav.b_input[31:0]
+wrapped_instrumented_adder_behav.s_output_bit_b[31:0]
+wrapped_instrumented_adder_behav.a_input_ext_bit_b[31:0]
+wrapped_instrumented_adder_behav.a_input_ring_bit_b[31:0]
+@1000200
+-mux
+@c00022
+wrapped_instrumented_adder_behav.io_out[37:0]
+@28
+(0)wrapped_instrumented_adder_behav.io_out[37:0]
+(1)wrapped_instrumented_adder_behav.io_out[37:0]
+(2)wrapped_instrumented_adder_behav.io_out[37:0]
+(3)wrapped_instrumented_adder_behav.io_out[37:0]
+(4)wrapped_instrumented_adder_behav.io_out[37:0]
+(5)wrapped_instrumented_adder_behav.io_out[37:0]
+(6)wrapped_instrumented_adder_behav.io_out[37:0]
+(7)wrapped_instrumented_adder_behav.io_out[37:0]
+(8)wrapped_instrumented_adder_behav.io_out[37:0]
+(9)wrapped_instrumented_adder_behav.io_out[37:0]
+(10)wrapped_instrumented_adder_behav.io_out[37:0]
+(11)wrapped_instrumented_adder_behav.io_out[37:0]
+(12)wrapped_instrumented_adder_behav.io_out[37:0]
+(13)wrapped_instrumented_adder_behav.io_out[37:0]
+(14)wrapped_instrumented_adder_behav.io_out[37:0]
+(15)wrapped_instrumented_adder_behav.io_out[37:0]
+(16)wrapped_instrumented_adder_behav.io_out[37:0]
+(17)wrapped_instrumented_adder_behav.io_out[37:0]
+(18)wrapped_instrumented_adder_behav.io_out[37:0]
+(19)wrapped_instrumented_adder_behav.io_out[37:0]
+(20)wrapped_instrumented_adder_behav.io_out[37:0]
+(21)wrapped_instrumented_adder_behav.io_out[37:0]
+(22)wrapped_instrumented_adder_behav.io_out[37:0]
+(23)wrapped_instrumented_adder_behav.io_out[37:0]
+(24)wrapped_instrumented_adder_behav.io_out[37:0]
+(25)wrapped_instrumented_adder_behav.io_out[37:0]
+(26)wrapped_instrumented_adder_behav.io_out[37:0]
+(27)wrapped_instrumented_adder_behav.io_out[37:0]
+(28)wrapped_instrumented_adder_behav.io_out[37:0]
+(29)wrapped_instrumented_adder_behav.io_out[37:0]
+(30)wrapped_instrumented_adder_behav.io_out[37:0]
+(31)wrapped_instrumented_adder_behav.io_out[37:0]
+(32)wrapped_instrumented_adder_behav.io_out[37:0]
+(33)wrapped_instrumented_adder_behav.io_out[37:0]
+(34)wrapped_instrumented_adder_behav.io_out[37:0]
+(35)wrapped_instrumented_adder_behav.io_out[37:0]
+(36)wrapped_instrumented_adder_behav.io_out[37:0]
+(37)wrapped_instrumented_adder_behav.io_out[37:0]
+@1401200
+-group_end
+@23
+wrapped_instrumented_adder_behav.la3_data_out[31:0]
+[pattern_trace] 1
+[pattern_trace] 0
