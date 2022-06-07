@@ -8,7 +8,7 @@ project:
   license: LICENSE
 
 # optional interfaces you want to use: gpio, la1, la2, la3, irq, clk2, wishbone & openram
-interfaces: ['la1', 'la2', 'la3']
+interfaces: ['gpio', 'la1', 'la2', 'la3']
 
 # test within caravel
 caravel_test:

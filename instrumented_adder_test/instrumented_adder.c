@@ -62,10 +62,10 @@
 
 void set_mux(unsigned char reg_sel, unsigned int value)
 {
-    reg_la1_data_in = (reg_la1_data_in & ~mask) | (reg_sel & mask);
-    reg_la3_data_in = value;
-    reg_la1_data_in[MUX_WRITE] = 1;
-    reg_la1_data_in[MUX_WRITE] = 0;
+    reg_la1_data = (reg_la1_data & ~REG_SEL_MASK) | ((reg_sel << 9) & REG_SEL_MASK);
+    reg_la3_data = value;
+    SET(reg_la1_data, MUX_WRITE);
+    CLR(reg_la1_data, MUX_WRITE);
 }
 
 void main()
@@ -134,12 +134,12 @@ void main()
 
     // todo
     // set a & b input to be 0
-    set_mux(dut, A_INPUT, 0);
-    set_mux(dut, B_INPUT, 0);
+    set_mux(A_INPUT, 0);
+    set_mux(B_INPUT, 0);
     // set control pins up to bypass adder
-    set_mux(dut, A_INPUT_EXT_BIT,     0x0);
-    set_mux(dut, S_OUTPUT_BIT,        0xFFFFFFFF);
-    set_mux(dut, A_INPUT_RING_BIT,    0xFFFFFFFF);
+    set_mux(A_INPUT_EXT_BIT,     0x0);
+    set_mux(S_OUTPUT_BIT,        0xFFFFFFFF);
+    set_mux(A_INPUT_RING_BIT,    0xFFFFFFFF);
 
     // disable control loop
     SET(reg_la1_data, CONTROL_B);
