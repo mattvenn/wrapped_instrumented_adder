@@ -36,9 +36,12 @@ module instrumented_adder_tb;
 
     ///// convenience signals that match what the cocotb test modules are looking for
     // change to suit your project. Here's how we can make some nicer named signals for inputs & outputs
-    wire ready = mprj_io[8];
-    wire done = mprj_io[9];
-    wire [7:0] ring_osc = mprj_io[17:10];
+    wire stop_out = mprj_io[8];
+    wire ring_out = mprj_io[9];
+    wire done_out = mprj_io[10];
+    wire fw_ready = mprj_io[11];
+    wire fw_done = mprj_io[12];
+    wire [7:0] fw_ring_osc = mprj_io[20:13];
     /////
     
 

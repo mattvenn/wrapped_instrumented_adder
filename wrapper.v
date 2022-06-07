@@ -5,7 +5,7 @@
 
 //`define USE_WB  1
 `define USE_LA  1
-//`define USE_IO  1
+`define USE_IO  1
 //`define USE_SHARED_OPENRAM 1
 //`define USE_MEM 1
 //`define USE_IRQ 1
@@ -155,12 +155,46 @@ module wrapped_instrumented_adder_kogge(
     `endif
     `endif
 
+    // causes loads of warnings but otherwise can't easily get the vcd
+    `ifdef COCOTB_SIM
+    initial begin
+        $dumpfile ("wrapped_instrumented_adder_kogge.vcd");
+        $dumpvars (0, wrapped_instrumented_adder_kogge);
+        #1;
+    end
+    `endif
+
     // permanently set oeb so that outputs are always enabled: 0 is output, 1 is high-impedance
     assign buf_io_oeb = {`MPRJ_IO_PADS{1'b0}};
 
-    // Instantiate your module here, 
-    // connecting what you need of the above signals. 
-    // Use the buffered outputs for your module's outputs.
+    parameter WIDTH = 32;
+    reg [WIDTH-1:0] a_input;
+    reg [WIDTH-1:0] b_input;
+    reg [WIDTH-1:0] s_output_bit_b;
+    reg [WIDTH-1:0] a_input_ext_bit_b;
+    reg [WIDTH-1:0] a_input_ring_bit_b;
+    wire [WIDTH-1:0] sum_out;
+    wire write          = la1_data_in[8];
+    wire [3:0] reg_sel  = la1_data_in[12:9];
+
+    // multiplex la3_data_in/out to the 32 bit wide registers
+    always @(posedge wb_clk_i) begin
+        if(write)
+            case(reg_sel)
+            0: a_input            <= la3_data_in;    
+            1: b_input            <= la3_data_in;
+            2: s_output_bit_b     <= la3_data_in;
+            3: a_input_ext_bit_b  <= la3_data_in;
+            4: a_input_ring_bit_b <= la3_data_in;
+            endcase
+    end 
+
+    assign buf_la3_data_out = reg_sel == 0 ? a_input :
+                              reg_sel == 1 ? b_input :
+                              reg_sel == 2 ? s_output_bit_b :
+                              reg_sel == 3 ? a_input_ext_bit_b :
+                              reg_sel == 4 ? a_input_ring_bit_b :
+                                             sum_out;
 
     instrumented_adder_kogge instrumented_adder(
 
@@ -172,25 +206,30 @@ module wrapped_instrumented_adder_kogge(
     .extra_inverter         (la1_data_in[2]),        // adds an extra inverter into the ring
     .bypass_b               (la1_data_in[3]),        // bypass the adder (inverted)
     .control_b              (la1_data_in[4]),        // enables an additional control loop (inverted)
-    .a_input_ext_bit_b      (la1_data_in[15:8]),     // which bit of the adder's a input to connect to external a_input (inverted)
-    .a_input_ring_bit_b     (la1_data_in[23:16]),    // which bit of the adder's a input to connect to the ring (inverted)
-    .s_output_bit_b         (la1_data_in[31:24]),    // which bit of sum to connect back to the ring (inverted)
+    .a_input_ext_bit_b      (a_input_ext_bit_b),       // which bit of the adder's a input to connect to external a_input (inverted)
+    .a_input_ring_bit_b     (a_input_ring_bit_b),      // which bit of the adder's a input to connect to the ring (inverted)
+    .s_output_bit_b         (s_output_bit_b),          // which bit of sum to connect back to the ring (inverted)
 
     // counter control
     .counter_enable         (la1_data_in[5]),
     .counter_load           (la1_data_in[6]),
+    .force_count            (la1_data_in[7]),       // force counter to count even without integration counter
     .integration_time       (la2_data_in),
     
     // adder inputs
-    .a_input                (la3_data_in[7:0]),
-    .b_input                (la3_data_in[15:8]),
+    .a_input                (a_input),
+    .b_input                (b_input),
 
     // outputs
     //.ring_osc_out           (la1_data_out),         // used for spice sims
-    .sum_out                (buf_la1_data_out[7:0]),    // output of the adder
-    .done                   (buf_la1_data_out[8]),      // when the integration counter gets to zero
-    .ring_osc_counter_out   (buf_la2_data_out)          // number of ring cycles / 2 counted
+    .sum_out                (sum_out),                // output of the adder
+    .done                   (buf_la1_data_out[0]),    // when the integration counter gets to zero
+    .ring_osc_counter_out   (buf_la2_data_out)        // number of ring cycles / 2 counted
     );
+
+    assign buf_io_out[8] = la1_data_in[1];            // stop control
+    assign buf_io_out[9] = buf_la2_data_out[3];       // 4th bit of ring osc counter
+    assign buf_io_out[10]= buf_la1_data_out[0];       // when the counter is done
 
 endmodule 
 `default_nettype wire

@@ -1,4 +1,5 @@
 .history/
 runs/
 properties/
+properties_*/
 __pycache__/
