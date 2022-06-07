@@ -1,23 +1,23 @@
 [*]
 [*] GTKWave Analyzer v3.3.111 (w)1999-2020 BSI
-[*] Fri Jun  3 11:43:13 2022
+[*] Tue Jun  7 10:50:41 2022
 [*]
 [dumpfile] "/home/matt/work/asic-workshop/shuttle6/zero_to_asic_mpw6/verilog/dv/instrumented_adder_test/instrumented_adder.vcd"
-[dumpfile_mtime] "Fri Jun  3 11:39:56 2022"
-[dumpfile_size] 678432
+[dumpfile_mtime] "Tue Jun  7 10:46:09 2022"
+[dumpfile_size] 1278151
 [savefile] "/home/matt/work/asic-workshop/shuttle6/zero_to_asic_mpw6/verilog/dv/instrumented_adder_test/instrumented_adder.gtkw"
-[timestart] 797345000
+[timestart] 1907500000
 [size] 2488 1519
 [pos] 25 22
-*-20.699999 801200000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-24.900000 2059460000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] instrumented_adder_tb.
 [treeopen] instrumented_adder_tb.uut.
 [treeopen] instrumented_adder_tb.uut.mprj.
 [treeopen] instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.
 [sst_width] 612
-[signals_width] 707
+[signals_width] 752
 [sst_expanded] 1
-[sst_vpaned_height] 576
+[sst_vpaned_height] 535
 @28
 instrumented_adder_tb.flash_clk
 instrumented_adder_tb.flash_csb
@@ -34,14 +34,74 @@ instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.instrumented_a
 @8024
 instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.instrumented_adder.ring_osc_counter[31:0]
 instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.instrumented_adder.integration_counter[31:0]
-@29
+@28
 instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.instrumented_adder.ring_top
 @200
 -
 @28
-instrumented_adder_tb.ready
-instrumented_adder_tb.done
-@24
-instrumented_adder_tb.ring_osc[7:0]
+instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.instrumented_adder.r_select_bypass_b
+instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.instrumented_adder.r_select_control_b
+@22
+instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.instrumented_adder.r_select_s_output_bit_b[31:0]
+@200
+-
+@c00022
+instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.la1_data_in[31:0]
+@28
+(0)instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.la1_data_in[31:0]
+(1)instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.la1_data_in[31:0]
+(2)instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.la1_data_in[31:0]
+(3)instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.la1_data_in[31:0]
+(4)instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.la1_data_in[31:0]
+(5)instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.la1_data_in[31:0]
+(6)instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.la1_data_in[31:0]
+(7)instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.la1_data_in[31:0]
+(8)instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.la1_data_in[31:0]
+(9)instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.la1_data_in[31:0]
+(10)instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.la1_data_in[31:0]
+(11)instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.la1_data_in[31:0]
+(12)instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.la1_data_in[31:0]
+(13)instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.la1_data_in[31:0]
+(14)instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.la1_data_in[31:0]
+(15)instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.la1_data_in[31:0]
+(16)instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.la1_data_in[31:0]
+(17)instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.la1_data_in[31:0]
+(18)instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.la1_data_in[31:0]
+(19)instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.la1_data_in[31:0]
+(20)instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.la1_data_in[31:0]
+(21)instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.la1_data_in[31:0]
+(22)instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.la1_data_in[31:0]
+(23)instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.la1_data_in[31:0]
+(24)instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.la1_data_in[31:0]
+(25)instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.la1_data_in[31:0]
+(26)instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.la1_data_in[31:0]
+(27)instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.la1_data_in[31:0]
+(28)instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.la1_data_in[31:0]
+(29)instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.la1_data_in[31:0]
+(30)instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.la1_data_in[31:0]
+(31)instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.la1_data_in[31:0]
+@1401200
+-group_end
+@22
+instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.la3_data_out[31:0]
+@800200
+-mux
+@28
+instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.write
+@22
+instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.reg_sel[3:0]
+instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.a_input[31:0]
+instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.b_input[31:0]
+instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.a_input_ext_bit_b[31:0]
+instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.s_output_bit_b[31:0]
+instrumented_adder_tb.uut.mprj.wrapped_instrumented_adder_behav_2.a_input_ring_bit_b[31:0]
+@1000200
+-mux
+@28
+instrumented_adder_tb.done_out
+instrumented_adder_tb.stop_out
+instrumented_adder_tb.ring_out
+@23
+instrumented_adder_tb.fw_ring_osc[7:0]
 [pattern_trace] 1
 [pattern_trace] 0

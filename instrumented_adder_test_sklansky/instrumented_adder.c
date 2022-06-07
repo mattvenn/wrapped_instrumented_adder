@@ -29,12 +29,44 @@
 #define CONTROL_B       4
 #define COUNTER_EN      5
 #define COUNTER_LOAD    6 
+#define COUNT_FORCE     7 
+
+// mux control
+#define MUX_WRITE       8
+#define REG_SEL_0       9  
+#define REG_SEL_1       10
+#define REG_SEL_2       11
+#define REG_SEL_3       12
+
+// ring osc starting pin
+#define RING_OUT_BIT0   13
+
 // output status pin
-#define DONE            8
+#define DONE            0
+
+#define FW_READY        11
+#define FW_DONE         12
 
 #define SET(PIN,N) (PIN |=  (1<<N))
 #define CLR(PIN,N) (PIN &= ~(1<<N))
 #define GET(PIN,N) (PIN &   (1<<N))
+
+// mux
+#define REG_SEL_MASK    0x1E00
+#define A_INPUT           0
+#define B_INPUT           1
+#define S_OUTPUT_BIT      2
+#define A_INPUT_EXT_BIT   3
+#define A_INPUT_RING_BIT  4
+#define SUM               5
+
+void set_mux(unsigned char reg_sel, unsigned int value)
+{
+    reg_la1_data = (reg_la1_data & ~REG_SEL_MASK) | ((reg_sel << 9) & REG_SEL_MASK);
+    reg_la3_data = value;
+    SET(reg_la1_data, MUX_WRITE);
+    CLR(reg_la1_data, MUX_WRITE);
+}
 
 void main()
 {
@@ -53,17 +85,21 @@ void main()
 	| 001    | 0     | 0     | 0      | 0      | 0     | 0       | 0       | 0     | 1     | 0       |
 
 	*/
-    reg_mprj_io_8 = GPIO_MODE_MGMT_STD_OUTPUT; // ready
-    reg_mprj_io_9 = GPIO_MODE_MGMT_STD_OUTPUT; // done
+    reg_mprj_io_8 = GPIO_MODE_USER_STD_OUTPUT; // stop
+    reg_mprj_io_9 = GPIO_MODE_USER_STD_OUTPUT; // ring out
+    reg_mprj_io_10 = GPIO_MODE_USER_STD_OUTPUT; // done
 
-    reg_mprj_io_10 = GPIO_MODE_MGMT_STD_OUTPUT; // ring osc counter out
-    reg_mprj_io_11 = GPIO_MODE_MGMT_STD_OUTPUT; // ring osc counter out
-    reg_mprj_io_12 = GPIO_MODE_MGMT_STD_OUTPUT; // ring osc counter out
+    reg_mprj_io_11 = GPIO_MODE_MGMT_STD_OUTPUT; // fw ready
+    reg_mprj_io_12 = GPIO_MODE_MGMT_STD_OUTPUT; // fw done
+
     reg_mprj_io_13 = GPIO_MODE_MGMT_STD_OUTPUT; // ring osc counter out
     reg_mprj_io_14 = GPIO_MODE_MGMT_STD_OUTPUT; // ring osc counter out
     reg_mprj_io_15 = GPIO_MODE_MGMT_STD_OUTPUT; // ring osc counter out
     reg_mprj_io_16 = GPIO_MODE_MGMT_STD_OUTPUT; // ring osc counter out
     reg_mprj_io_17 = GPIO_MODE_MGMT_STD_OUTPUT; // ring osc counter out
+    reg_mprj_io_18 = GPIO_MODE_MGMT_STD_OUTPUT; // ring osc counter out
+    reg_mprj_io_19 = GPIO_MODE_MGMT_STD_OUTPUT; // ring osc counter out
+    reg_mprj_io_20 = GPIO_MODE_MGMT_STD_OUTPUT; // ring osc counter out
 
     reg_mprj_xfer = 1;
     while (reg_mprj_xfer == 1);
@@ -74,7 +110,7 @@ void main()
     reg_la0_data |= (1 << PROJECT_ID); // enable the project
 
     // tell the test bench we're ready
-	reg_mprj_datal |= 1 << 8;
+	reg_mprj_datal |= 1 << FW_READY;
 
     reg_la1_oenb = 0xFFFFFFFF; // enable
     reg_la1_iena = 0;          // enable
@@ -95,16 +131,15 @@ void main()
     CLR(reg_la1_data, STOP_B);
     // enable extra inverter
     SET(reg_la1_data, EXTRA_INV);
-    // set a & b input to be 0
-    reg_la3_data = 0;
 
-    // disable adder sum connection and inputs
-    /*
-    .a_input_ext_bit_b      (la1_data_in[15:8]),     // which bit of the adder's a input to connect to external a_input (inverted)
-    .a_input_ring_bit_b     (la1_data_in[23:16]),    // which bit of the adder's a input to connect to the ring (inverted)
-    .s_output_bit_b         (la1_data_in[31:24]),    // which bit of sum to connect back to the ring (inverted)
-    */
-    reg_la1_data |= 0xFFFF00 << 8;
+    // todo
+    // set a & b input to be 0
+    set_mux(A_INPUT, 0);
+    set_mux(B_INPUT, 0);
+    // set control pins up to bypass adder
+    set_mux(A_INPUT_EXT_BIT,     0x0);
+    set_mux(S_OUTPUT_BIT,        0xFFFFFFFF);
+    set_mux(A_INPUT_RING_BIT,    0xFFFFFFFF);
 
     // disable control loop
     SET(reg_la1_data, CONTROL_B);
@@ -129,9 +164,9 @@ void main()
     }
 
     // set the ring osc value onto the pins
-    reg_mprj_datal = reg_la2_data_in << 10;
+    reg_mprj_datal = reg_la2_data_in << RING_OUT_BIT0;
 
     // set done on the mprj pins
-	reg_mprj_datal |= 1 << 9;
+	reg_mprj_datal |= 1 << FW_DONE;
 }
 

@@ -17,22 +17,24 @@ set ::env(VERILOG_FILES) "$::env(DESIGN_DIR)/wrapper.v \
 set ::env(SYNTH_READ_BLACKBOX_LIB) 1
 
 # target density, change this if you can't get your design to fit
-set ::env(PL_TARGET_DENSITY) 0.4
+set ::env(PL_TARGET_DENSITY) 0.20
+#set ::env(GLB_RT_ALLOW_CONGESTION) 1
 #set ::env(FP_CORE_UTIL) 35
 #set ::env(PL_TARGET_DENSITY) [ expr ($::env(FP_CORE_UTIL)+5) / 100.0 ]
 
 # don't put clock buffers on the outputs, need tristates to be the final cells
 set ::env(PL_RESIZER_BUFFER_OUTPUT_PORTS) 0
 
+# because the area we need is constrained by the number of pins, replace kept failing
 # set absolute size of the die to 300 x 300 um
-set ::env(DIE_AREA) "0 0 250 250"
+set ::env(DIE_AREA) "0 0 380 380"
 set ::env(FP_SIZING) absolute
 
 # define number of IO pads
 set ::env(SYNTH_DEFINES) "MPRJ_IO_PADS=38"
 
 # clock period is ns
-set ::env(CLOCK_PERIOD) "10"
+set ::env(CLOCK_PERIOD) "20"
 set ::env(CLOCK_PORT) "wb_clk_i"
 
 # macro needs to work inside Caravel, so can't be core and can't use metal 5
