@@ -174,8 +174,8 @@ module wrapped_instrumented_adder_behav(
     reg [WIDTH-1:0] a_input_ext_bit_b;
     reg [WIDTH-1:0] a_input_ring_bit_b;
     wire [WIDTH-1:0] sum_out;
-    wire write          = la1_data_in[7];
-    wire [3:0] reg_sel  = la1_data_in[11:8];
+    wire write          = la1_data_in[8];
+    wire [3:0] reg_sel  = la1_data_in[12:9];
 
     // multiplex la3_data_in/out to the 32 bit wide registers
     always @(posedge wb_clk_i) begin
@@ -213,6 +213,7 @@ module wrapped_instrumented_adder_behav(
     // counter control
     .counter_enable         (la1_data_in[5]),
     .counter_load           (la1_data_in[6]),
+    .force_count            (la1_data_in[7]),       // force counter to count even without integration counter
     .integration_time       (la2_data_in),
     
     // adder inputs

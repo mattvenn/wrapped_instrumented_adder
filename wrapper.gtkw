@@ -1,20 +1,20 @@
 [*]
-[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
-[*] Mon Jun  6 20:50:04 2022
+[*] GTKWave Analyzer v3.3.111 (w)1999-2020 BSI
+[*] Tue Jun  7 09:57:01 2022
 [*]
 [dumpfile] "/home/matt/work/asic-workshop/shuttle5/openlane/designs/wrapped_instrumented_adder/instrumented_adder.vcd"
-[dumpfile_mtime] "Mon Jun  6 20:49:38 2022"
-[dumpfile_size] 8627904
+[dumpfile_mtime] "Tue Jun  7 09:55:06 2022"
+[dumpfile_size] 11983984
 [savefile] "/home/matt/work/asic-workshop/shuttle5/openlane/designs/wrapped_instrumented_adder/wrapper.gtkw"
-[timestart] 113520
-[size] 1000 912
+[timestart] 0
+[size] 2015 1391
 [pos] -1 -1
-*-13.000000 120150 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-16.000000 153000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] wrapped_instrumented_adder_behav.
-[sst_width] 316
-[signals_width] 337
+[sst_width] 343
+[signals_width] 728
 [sst_expanded] 1
-[sst_vpaned_height] 253
+[sst_vpaned_height] 413
 @28
 wrapped_instrumented_adder_behav.active
 wrapped_instrumented_adder_behav.instrumented_adder.reset
@@ -34,6 +34,13 @@ wrapped_instrumented_adder_behav.instrumented_adder.done
 wrapped_instrumented_adder_behav.instrumented_adder.ring_osc_counter_out[31:0]
 @1000200
 -controls
+@800201
+-ring
+@29
+wrapped_instrumented_adder_behav.instrumented_adder.ring_top
+wrapped_instrumented_adder_behav.instrumented_adder.r2
+@1000201
+-ring
 @800200
 -mux
 @28
@@ -90,7 +97,15 @@ wrapped_instrumented_adder_behav.io_out[37:0]
 (37)wrapped_instrumented_adder_behav.io_out[37:0]
 @1401200
 -group_end
-@23
+@22
 wrapped_instrumented_adder_behav.la3_data_out[31:0]
+@800200
+-adder
+@22
+wrapped_instrumented_adder_behav.instrumented_adder.adder_a[31:0]
+wrapped_instrumented_adder_behav.instrumented_adder.adder_b[31:0]
+wrapped_instrumented_adder_behav.instrumented_adder.adder_sum[31:0]
+@1000200
+-adder
 [pattern_trace] 1
 [pattern_trace] 0
