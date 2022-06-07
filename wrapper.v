@@ -229,6 +229,7 @@ module wrapped_instrumented_adder_behav(
 
     assign buf_io_out[8] = la1_data_in[1];            // stop control
     assign buf_io_out[9] = buf_la2_data_out[3];       // 4th bit of ring osc counter
+    assign buf_io_out[10]= buf_la1_data_out[0];       // when the counter is done
 
 endmodule 
 `default_nettype wire
